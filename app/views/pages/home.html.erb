@@ -1,0 +1,50 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<%= link_to "Go Back", root_path, class: "btn btn-primary" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form id="myform" action="/pages/submit_form" method="POST">
+        <div class="form-group">
+          <label for="datepicker">What's your birthday:</label>
+          <input type="text" id="datepicker" name="bday">
+        </div>
+        <div class="form-group">
+          <label for="city">Where were you born:</label>
+          <input type="text" id="city" name="city" maxlength="25">
+        </div>
+        <div class="form-group">
+          <label for="slider">Choose a number between 10 and 30:</label>
+          <input type="range" class="form-control-range" id="slider" min="10" max="30" name="slider">
+          <span id="slider-value"></span>
+        </div>
+        <div class="form-group">
+          <label for="image">Choose an image:</label>
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+              <img src="/assets/bouba.png" alt="Bouba" width="100" height="100">
+              <div class="ml-3">
+                <input class="form-check-input" type="radio" name="bbkk" id="Bouba" value="Booba">
+                <label class="form-check-label" for="Bouba">
+                  Bouba
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <img src="/assets/kiki.png" alt="Kiki" width="100" height="100">
+              <div class="ml-3">
+                <input class="form-check-input" type="radio" name="bbkk" id="Kiki" value="Kiki">
+                <label class="form-check-label" for="Kiki">
+                  Kiki
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
