@@ -4,10 +4,11 @@ class PagesController < ApplicationController
 
   def submit_form
     # Access form data using the params hash
-    birthday = params[:bday]
-    city = params[:city]
-    number = params[:slider]
-    image = params[:bbkk]
+    @submitted = true
+    @birthday = params[:bday]
+    @city = params[:city]
+    @number = params[:slider]
+    @image = params[:bbkk]
     
     # Do something with the form data...
     

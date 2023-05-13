@@ -6,7 +6,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <form id="myform" action="/pages/submit_form" method="POST">
+      <form id="myform" action="<%= submit_form_path %>" method="POST">
         <div class="form-group">
           <label for="datepicker">What's your birthday:</label>
           <input type="text" id="datepicker" name="bday">
@@ -48,3 +48,5 @@
     </div>
   </div>
 </div>
+
+<%= render partial: 'params' if @submitted === true %>
