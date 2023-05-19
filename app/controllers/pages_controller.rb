@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @submitted = false
   end
 
   def submit_form
@@ -10,8 +11,20 @@ class PagesController < ApplicationController
     @number = params[:slider]
     @image = params[:bbkk]
     @submitted = true
-    @submitted.save!
-    
+
+    # take the two words, portmanteau them
+    # If kiki replace all B,s with Ks, all O's with I; if bouba, do the reverse
+    # repeat the string if you want to
+
+    start_bday = birthday[0]
+    start_city = city[0]
+    bday[0] = start_city
+    city[0] = start_bday
+
+    if bday.length > city.length
+      portmanteau = city + bday
+    else
+      portmanteau = bday + city
     # Do something with the form data...
     
     # Redirect to the home page
