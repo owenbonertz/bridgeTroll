@@ -6,13 +6,17 @@ class PagesController < ApplicationController
   def submit_form
     # Access form data using the params hash
     
-    @pet = params[:bday]
+    @pet = params[:pet_name]
     @city = params[:city]
     @image = params[:bbkk]
-    @slider = params[:slider]
+    @slider = params[:slider].to_i
     @submitted = true
 
+    puts(@pet)
+    puts(@city)
+
     @city.chomp!
+    @pet.chomp!
 
     start_fart = @pet[0]
     start_bruh = @city[0]
@@ -57,6 +61,8 @@ class PagesController < ApplicationController
     end
 
     @newPort = newPort
+    Rails.logger.debug(@newPort)
+    render 'home'
   end
  
 
