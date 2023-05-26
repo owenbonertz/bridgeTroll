@@ -8,3 +8,16 @@
     align-items: center;
     height: 100vh;
   }
+
+  .form-field {
+    border: 3px solid green;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  button[type="submit"] {
+    text-align:center;
+    margin: 0 auto;
+    display: block;
+
+  }
