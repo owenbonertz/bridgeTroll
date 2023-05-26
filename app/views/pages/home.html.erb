@@ -1,54 +1,62 @@
 <h1 class="title">Ultra High Tech Cyber Security Company Lock Safe Web Guard Password Generator</h1>
 
 
-<%= link_to "Go Back", root_path, class: "btn btn-primary" %>
-
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <form id="myform" action="<%= submit_form_path %>" method="POST">
-        <%= csrf_meta_tags %>
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <div class="form-group">
-          <label for="datepicker">What's your birthday:</label>
-          <input type="text" id="datepicker" name="bday">
-        </div>
-        <div class="form-group">
-          <label for="city">Where were you born:</label>
-          <input type="text" id="city" name="city" maxlength="25">
-        </div>
-        <div class="form-group">
-          <label for="slider">Choose a number between 10 and 30:</label>
-          <input type="range" class="form-control-range" id="slider" min="10" max="30" name="slider">
-          <span id="slider-value"></span>
-        </div>
-        <div class="form-group">
-          <label for="image">Choose an image:</label>
-          <div class="row">
-            <div class="col-md-6 d-flex align-items-center">
-              <img src="/assets/bouba.png" alt="Bouba" width="100" height="100">
-              <div class="ml-3">
-                <input class="form-check-input" type="radio" name="bbkk" id="Bouba" value="Booba">
-                <label class="form-check-label" for="Bouba">
-                  Bouba
-                </label>
-              </div>
+      <div class="form-container">
+        <h1 class="form-field">Ultra High Tech Cyber Security Company Lock Safe Web Guard Password Generator</h1>
+        <form id="myform" action="<%= submit_form_path %>" method="POST">
+          <%= csrf_meta_tags %>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <div class="form-group">
+            <label for="pet-name">What was the name of your first pet/your mother's maiden name?</label>
+            <div class="form-field">
+              <input type="text" id="pet-name" name="pet_name">
             </div>
-            <div class="col-md-6 d-flex align-items-center">
-              <img src="/assets/kiki.png" alt="Kiki" width="100" height="100">
-              <div class="ml-3">
-                <input class="form-check-input" type="radio" name="bbkk" id="Kiki" value="Kiki">
-                <label class="form-check-label" for="Kiki">
-                  Kiki
-                </label>
+          </div>
+          <div class="form-group">
+            <label for="city">Where were you born:</label>
+            <div class="form-field">
+              <input type="text" id="city" name="city" maxlength="25">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="slider">Choose a number between 10 and 30:</label>
+            <div class="form-field">
+              <input type="range" class="form-control-range" id="slider" min="10" max="30" name="slider">
+              <span id="slider-value"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="image">Choose an image:</label>
+            <div class="row">
+              <div class="col-md-6 d-flex align-items-center">
+                <img src="/assets/bouba.png" alt="Bouba" width="100" height="100">
+                <div class="ml-3 form-field">
+                  <input class="form-check-input" type="radio" name="bbkk" id="Bouba" value="Booba">
+                  <label class="form-check-label" for="Bouba">
+                    Bouba
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-center">
+                <img src="/assets/kiki.png" alt="Kiki" width="100" height="100">
+                <div class="ml-3 form-field">
+                  <input class="form-check-input" type="radio" name="bbkk" id="Kiki" value="Kiki">
+                  <label class="form-check-label" for="Kiki">
+                    Kiki
+                  </label>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
 
-<%= render partial: 'params' if @submitted === true %>
+<%= render partial: 'pages/params', locals: { newPort: @newPort } %>
+
