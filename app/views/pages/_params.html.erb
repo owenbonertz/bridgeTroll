@@ -2,6 +2,23 @@
   console.log('Checking to see if we submitted');
 </script>
 
-<div>
-  <h2>New Portmanteau: <%= @newPort %></h2>
+<style>
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid green;
+    padding: 10px;
+  }
+
+  .form-field h2,
+  .form-field p {
+    margin: 0;
+  }
+</style>
+
+<div class="form-field">
+  <h2>New Portmanteau: </h2> 
+  <%= @newPort %>
 </div>
