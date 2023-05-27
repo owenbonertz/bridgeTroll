@@ -6,25 +6,14 @@ import "controllers"
 import 'bootstrap';
 import 'bootstrap/dist/js/bootstrap';
 
-$(function() {
-    $("#datepicker").datepicker();
-    yearRange: "-100:+0"
-    changeMonth: true
-    changeYear: true
-  });
 
-  $(function() {
-    $("form").submit(function(event) {
-      event.preventDefault();
-      const form = $(this);
-      const formData = form.serialize();
-      console.log(formData);
-    });
-  });
 
-  function updateSliderValue(value) {
-    document.getElementById("sliderValue").textContent = value;
-  }
+  document.addEventListener("DOMContentLoaded", function() {
+    // Your JavaScript code here
+    function updateSliderValue(value) {
+      document.getElementById("sliderValue").textContent = value;
+    };
+  });
   
 
 //= require jquery-ui/datepicker
