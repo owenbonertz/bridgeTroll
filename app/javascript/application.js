@@ -22,4 +22,9 @@ $(function() {
     });
   });
 
+  function updateSliderValue(value) {
+    document.getElementById("sliderValue").textContent = value;
+  }
+  
+
 //= require jquery-ui/datepicker
