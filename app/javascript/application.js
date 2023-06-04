@@ -8,12 +8,15 @@ import 'bootstrap/dist/js/bootstrap';
 
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-    // Your JavaScript code here
-    function updateSliderValue(value) {
-      document.getElementById("sliderValue").textContent = value;
-    };
+document.addEventListener("DOMContentLoaded", function() {
+  const slider = document.getElementById("slider");
+  const sliderValue = document.getElementById("sliderValue");
+
+  // Add event listener to the slider
+  slider.addEventListener("input", function() {
+    sliderValue.textContent = slider.value;
   });
-  
+});
+
 
 //= require jquery-ui/datepicker
