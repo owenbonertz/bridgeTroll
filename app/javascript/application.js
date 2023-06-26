@@ -18,5 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+function calculateDaysBetweenDates(begin, end) {
+  const millisecondsPerDay = 86400 * 1000;
+  const millisBetween = end - begin;
+  const days = millisBetween / millisecondsPerDay;
+  return 
+}
 
 //= require jquery-ui/datepicker
